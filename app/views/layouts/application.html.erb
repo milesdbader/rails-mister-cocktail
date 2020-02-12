@@ -13,10 +13,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="d-flex align-items-center justify-content-between p-3">
+      <h1>THE COCKTAIL APP</h1>
+      <p>By Miles Bader</p>
+    </header>
 
-      <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-      <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-    </body>
+    <nav class="container px-3 mb-3">
+      <%= link_to "My Cocktails", cocktails_path, class: 'btn btn-primary' %>
+      <%= link_to "Create Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="p-3 mt-5">
+      <p>Created @ Le Wagon</p>
+    </footer>
+
+    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
 </html>
