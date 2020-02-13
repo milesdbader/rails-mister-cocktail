@@ -11,10 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "components/cocktail_card";
+@import "components/background_image_container";
+@import "components/site_header";
 @import "pages/index";
 
 body {
   margin: 0;
-  background-color: $green;
+  background-color: $black;
   color: $mist;
 }
