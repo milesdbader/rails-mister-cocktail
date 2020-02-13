@@ -10,4 +10,11 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/cocktail_card";
 @import "pages/index";
+
+body {
+  margin: 0;
+  background-color: $green;
+  color: $mist;
+}

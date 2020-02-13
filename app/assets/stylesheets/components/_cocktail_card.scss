@@ -1,0 +1,26 @@
+.cocktail-card {
+  background-color: $mist;
+  border-radius: 8px;
+  padding: 8px;
+
+  display: flex;
+  justify-content: center;
+
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 1s;
+
+  &:hover {
+    box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.5);
+  }
+
+
+
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
