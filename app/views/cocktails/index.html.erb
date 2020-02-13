@@ -5,6 +5,7 @@
     <div class="col col-4">
       <div class="cocktail-card">
         <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+        <p><%= cocktail.description %></p>
       </div>
     </div>
   <% end %>
