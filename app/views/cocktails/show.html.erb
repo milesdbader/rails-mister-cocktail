@@ -1,6 +1,9 @@
 <div class="col-6 offset-3">
   <h2><%= @cocktail.name %></h2>
   <p><%= @cocktail.description %></p>
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, width: 450, crop: :fill %>
+  <% end %>
 
   <div class="d-flex align-items-center">
     <h3 class="mr-3">Ingredients</h3>
@@ -18,7 +21,7 @@
   <h3>Add an Ingredient</h3>
 
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
+    <%= f.input :description, label: "Amount"%>
     <%= f.input :ingredient_id, collection: Ingredient.all, input_html: {class: 'select2'} %>
     <%= f.submit "Add", class: 'btn btn-primary'%>
   <% end %>
